@@ -18,68 +18,6 @@ html body {
 }
 
 
-/* loader */
-
-#loader{
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    z-index: 99;
-    background-color: #3b3a3a;
-    color: white;
-}
-#loader #topheading{
-    position: absolute;
-    top: 5%;
-    left: 50%;
-    transform: (-50%, 0);  
-}
-#topheading h5{
-   text-align: center;
-    text-transform: uppercase;
-    font-size: 10px;
-    font-weight: 300;
-}
-
-#loader h1{
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    top: 50%;
-    left: 80%;
-    transform: translate(-50%, -50%);
-    font-size: 10vw;
-    font-weight: 500;
-}
-.reveal img{
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-}
-
-.reveal .parent .child{
-    display: block;
-}
-.parent .child span{
-    display: inline-block;
-}
-
-#green{
-    position: absolute;
-    top: 100%;
-    width: 100%;
-    z-index: 96;
-    height: 0vh;
-    background-color: #e3ea0b;
-}
-
-
-
-
-
-
-
-
 /* navbar */
 #nav {
     display: flex;
@@ -99,8 +37,44 @@ html body {
     text-decoration: none;
     padding: 6px 20px;
     transition: .5s;
+    position: relative;
     
 }
+#nav a .line1{
+    position: absolute;
+    display: inline-block;
+    width: 0%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    height: 1.4px;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+    transition-delay: .2s;
+    background: #000000;
+}
+#nav a .line2{
+    position: absolute;
+    display: inline-block;
+    width: 100%;
+    height: 1.4px;
+    background: #F8C935;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+}
+
+#nav a:hover .line2{
+    width: 0;
+
+}
+#nav a:hover .line1{
+    width: 100%;
+}
+#nav a:hover{
+    font-weight: 600;
+}
+
 
 
 .log {
@@ -133,7 +107,7 @@ html body {
 }
 
 .home-right {
-    background: #fff945;
+    background: #F8C935;
     clip-path: ellipse(50% 60% at 60% 30%);
     height: 100vh;
     width: 80vw;
@@ -156,7 +130,7 @@ html body {
 }
 .home-left h1{
     padding-left: 9vw;
-    font-size: 8vh;
+    font-size: 7.5vh;
 }
 
 .home-left h3{
@@ -229,6 +203,7 @@ html body {
     font-size: 4vw;
     color: #F8C935;
 }
+
 .sefty-right .p{
     margin-top: 5vh;
     margin-left: 10vh;
@@ -349,16 +324,23 @@ html body {
     padding-left: 3%;
     margin-left: 20%;
     margin-right: 43%;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 3vh;
     border-radius: 4vh;
     color: rgba(0, 0, 0, 0.5);
     cursor: pointer;
     border: #121111 solid 1.5px;  ;
 }
+
+.fleftelm .btn:hover{
+    color: #000000;
+    border: #000000 solid 1.5px;
+    font-weight: 600;
+}
 .content .btn:hover{
     color: #000000;
     border: #000000 solid 1.5px;
+    
 }
 
 
@@ -386,18 +368,48 @@ html body {
     object-fit: cover;
 }
 
+
+
+
+/* impact  */
+
 .impact{
     display: flex;
     flex-direction: column;
-    background-image: url("./Presentation1.jpg");
+    background-image: url("gallary/Presentation1.jpg");
     height: 100vh;
     width: 100vw;
     align-items: center;
     padding-top: -2vw;
     padding: 6vw;
+    position: relative;
 }
 
-.impact h1{
+.hvr .line1{
+        position: absolute;
+        display: inline-block;
+        width: 0%;
+        height: 2px;
+        background: #F8C935;
+        transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+}
+.hvr .line2{
+    position: absolute;
+    display: inline-block;
+    width: 13%;
+    height: 2px;
+    background: #000000;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+}
+
+.hvr:hover .line1{
+    width: 13%;
+}
+.hvr:hover .line2{
+    width: 0;
+}
+
+.impat h1{
     font-size: 4vw;
     font-weight: 500;
 }
@@ -469,10 +481,13 @@ html body {
     border-right: black solid 1px;
     background-color:#F8C935;
     border-top-left-radius: 3vw;
+    transition: cubic-bezier(0.19, 1, 0.22, 1) 1s;
 }
 .box span:hover{
     color: #000000;
     font-weight: 700;
+    z-index: 2;
+    scale: 1.1;
 }
 
 .box-elem img{
@@ -515,6 +530,10 @@ html body {
     width: 100vw;
     height: 100vh;
     padding: 5vw;
+}
+.other h1{
+    font-weight: 500;
+    padding-bottom: 5vw;
 }
 
 
@@ -572,19 +591,19 @@ footer{
     padding: .5vw;
     font-size: 1.3vw;
     white-space: nowrap;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 .list2 h1{
     padding: 1.4vw 2vw;
     font-size: 1.3vw;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 .list3 h1{
     padding: 1.4vw 1vw;
     font-size: 1.3vw;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 .list4{

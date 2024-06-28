@@ -13,174 +13,6 @@ function ValueSetter() {
 }
 
 
-// function loaderAnimation() {
-//   var t1 = gsap.timeline();
-//   t1.from("#loader .child span", {
-//     x: 900,
-//     duration: 1.5,
-//     ease: Power3.easeInOut,
-//   })
-//     .to("#loader .child span", {
-//       x: -20,
-//       y: 0,
-//       duration: 0.2,
-//       ease: Power3.easeInOut,
-//     })
-//     .to("#loader .child span", {
-//       x: -40,
-//       y: 10,
-//       duration: 0.2,
-//       ease: Power3.easeInOut,
-//     })
-//     .to("#loader .child span", {
-//       x: -60,
-//       y: 0,
-//       duration: 0.2,
-//       ease: Power3.easeInOut,
-//     })
-//     .to("#loader .child span", {
-//       x: -80,
-//       y: 10,
-//       duration: 0.2,
-//       ease: Power3.easeInOut,
-//     })
-//     .to("#loader .child span", {
-//       x: -100,
-//       y: 0,
-//       duration: 0.2,
-//       ease: Power3.easeInOut,
-//     })
-//     .to("#loader .child span", {
-//       x: -120,
-//       y: 10,
-//       duration: 0.2,
-//       ease: Power3.easeInOut,
-//     })
-//     .to("#loader .child span", {
-//       x: -140,
-//       y: 0,
-//       duration: 0.2,
-//       ease: Power3.easeInOut,
-//     })
-//     .to("#loader .child span", {
-//       x: -160,
-//       y: 10,
-//       duration: 0.2,
-//       ease: Power3.easeInOut,
-//     })
-//     .to("#loader .child span", {
-//       x: -180,
-//       y: 0,
-//       duration: 0.2,
-//       ease: Power3.easeInOut,
-//     })
-//     .to("#loader .child span", {
-//       x: -200,
-//       y: 10,
-//       duration: 0.2,
-//       ease: Power3.easeInOut,
-//     })
-//     .to("#loader .child span", {
-//       x: -220,
-//       y: 0,
-//       duration: 0.2,
-//       ease: Power3.easeInOut,
-//     })
-//     .to("#loader .child span", {
-//       x: -240,
-//       y: 10,
-//       duration: 0.2,
-//       ease: Power3.easeInOut,
-//     })
-//     .to("#loader .child span", {
-//       x: -260,
-//       y: 0,
-//       duration: 0.2,
-//       ease: Power3.easeInOut,
-//     })
-//     .to("#loader .child span", {
-//       x: -280,
-//       y: 10,
-//       duration: 0.2,
-//       ease: Power3.easeInOut,
-//     })
-//     .to("#loader .child span", {
-//       x: -300,
-//       y: 0,
-//       duration: 0.2,
-//       ease: Power3.easeInOut,
-//     })
-//     .to("#loader .child span", {
-//       x: -320,
-//       y: 10,
-//       duration: 0.2,
-//       ease: Power3.easeInOut,
-//     })
-//     .to("#loader .child span", {
-//       x: -340,
-//       y: 0,
-//       duration: 0.2,
-//       ease: Power3.easeInOut,
-//     })
-//     .to("#loader .child span", {
-//       x: -360,
-//       y: 10,
-//       duration: 0.2,
-//       ease: Power3.easeInOut,
-//     })
-//     .to("#loader .child span", {
-//       x: -400,
-//       y: 0,
-//       duration: 0.2,
-//       ease: Power3.easeInOut,
-//     })
-//     .to("#loader .child span", {
-//       x: -420,
-//       y: 10,
-//       duration: 0.2,
-//       ease: Power3.easeInOut,
-//     })
-//     .to("#loader .child span", {
-//       x: -440,
-//       y: 0,
-//       duration: 0.2,
-//       ease: Power3.easeInOut,
-//     })
-//     .to("#loader .child span", {
-//       x: -460,
-//       y: 10,
-//       duration: 0.2,
-//       ease: Power3.easeInOut,
-//     })
-
-//     .to("#loader .parent .child", {
-//       x: -4000,
-//       duration: 2,
-//       ease: Circ.easeInOut,
-//     })
-//     .to("#loader", {
-//       height: 0,
-//       duration: 1,
-//       ease: Circ.easeInOut,
-//     })
-//     .to("#green", {
-//       height: "100%",
-//       top: 0,
-//       duration: 1,
-//       delay: -1,
-//       ease: Circ.easeInOut,
-//     })
-//     .to("#green", {
-//       height: "0%",
-//       duration: 1,
-//       delay: -0.5,
-//       ease: Circ.easeInOut,
-//       onComplete: function () {
-//         animateHomePage();
-//       },
-//     });
-// }
-
 function animateHomePage() {
   var t1 = gsap.timeline();
   t1.to("#nav a", {
@@ -261,6 +93,22 @@ gsap.to(".sefty-right h1 span", {
 
 Shery.mouseFollower();
 Shery.makeMagnet(".magnet");
+
+Shery.hoverWithMediaCircle(".d", {
+   images:[ "./gallary/r1.png"],
+})
+
+Shery.textAnimate(".d" /* Element to target.*/, {
+    //Parameters are optional.
+    style: 1,
+    y: 10,
+    delay: 0.1,
+    duration: 3,
+    ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+    multiplier: 0.1,
+  });
+
+
 
 
 gsap.to(".fleftelm", {

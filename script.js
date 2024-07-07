@@ -96,7 +96,7 @@ Shery.mouseFollower();
 Shery.makeMagnet(".magnet");
 
 Shery.hoverWithMediaCircle(".d", {
-   images:[ "./gallary/r1.png"],
+   images:[ "gallary/r1.png"],
 })
 
 Shery.textAnimate(".d" /* Element to target.*/, {
